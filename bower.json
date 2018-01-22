@@ -1,0 +1,21 @@
+{
+  "name": "nova",
+  "description": "test",
+  "main": "index.js",
+  "authors": [
+    "Vorobyovds_it"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "2.*"
+  }
+}

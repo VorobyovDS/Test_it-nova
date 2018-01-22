@@ -1,0 +1,403 @@
+/*
+* Third Party
+*/
+//@import "../../bower_components/normalize.css/normalize.css";
+@import "../../bower_components/reset-css/reset.css";
+// шрифты
+@font-face { font-family: "Open Sans Regular"; src: url('../fonts/open-sans-regular.eot'); }
+@font-face { font-family: "Open Sans Regular"; src: url('../fonts/open-sans-regular.ttf'); }
+@font-face { font-family: "Open Sans Light"; src: url('../fonts/open-sans-light.eot'); }
+@font-face { font-family: "Open Sans Light"; src: url('../fonts/open-sans-light.ttf'); }
+@font-face { font-family: "Open Sans Italic"; src: url('../fonts/open-sans-italic.eot'); }
+@font-face { font-family: "Open Sans Italic"; src: url('../fonts/open-sans-italic.ttf'); }
+// цвета
+  $color-button-link = #91b642;
+  $color-header-link-hover = #6db63d;
+  $color-resources = #79899c
+  $color-resources-link = #8c989c
+  $color-advantages = #799c95
+  $color-advantages-link = #749c85
+  $color-offers = #754960
+  $color-offers-link = #75383b
+  $color-work = #477c71
+  $color-work-link = #507c5e
+
+$width-content = 977px;
+
+body {
+  min-width $width-content
+}
+.body__wrapper {
+    width $width-content
+    margin 0 auto
+    position relative
+    overflow hidden
+
+}
+//----------------------HEADER----------------------------------
+.header {
+  background url("../img/header/header-bg.png") no-repeat center;
+  height 400px;
+  min-width 100%
+
+  &__link {
+    position absolute
+    left 155px
+    bottom 38px
+    text-decoration none
+    font-family: 'Open Sans Regular', arial;
+    font-size 18px
+    text-transform uppercase
+    color: #ffffff
+    //border solid 1px #000000
+    padding 20px 62px
+    background-color $color-button-link
+    &:hover {
+      background-color $color-header-link-hover
+      transition 0.5s
+    }
+
+  }
+  &__men-img {
+    position absolute
+    right  -198px
+    top 0
+    margin-left 100px
+  }
+}
+  //--------------------------------------------
+  .main-content-title {
+      text-align center
+      font-family: 'Open Sans Light', Serif;
+      text-transform uppercase
+      font-size 24px
+      font-weight normal
+      //margin-top 37px
+    &_advantages {
+      color #ffffff
+      padding 24px 0
+    }
+  }
+  .content {
+    font-family: 'Open Sans Regular', Serif;
+    &__wrapper {
+      width $width-content
+      margin 0 auto
+    }
+    .content-info {
+      &__link {
+        color #ffffff
+        text-decoration none
+        display block
+        background-color $color-button-link
+        &:hover {
+          background-color $color-header-link-hover
+        }
+      }
+    &__title {
+      font-family: 'Open Sans Light', Serif;
+      text-transform uppercase
+      font-size 36px
+      font-weight normal
+      margin-top 33px
+      margin-bottom 29px
+      &_small {
+        font-size 16px
+      }
+    }
+      &__text {
+        font-size 16px
+        line-height 1.7
+      }
+      &__text:last-child {
+        margin-top 18px
+      }
+      &__button {
+        text-decoration none
+        font-size 18px
+        text-transform uppercase
+        width 357px
+        height 70px
+        margin 0 auto
+        text-align center
+        line-height 70px
+        margin-top 35px
+      }
+      &__item {
+        width 227px
+        text-align center
+        h2 {
+          margin 0
+          padding 0
+        }
+
+      }
+    }
+  .content-info-static {
+    margin-top 37px
+    &__wrapper {
+      display flex
+      justify-content space-between
+      margin-top 34px
+    }
+    &__title {
+      margin-top 37px
+      &_number {
+        color $color-button-link
+        font-size 60px
+        font-weight normal
+      }
+      &_small {
+        color $color-button-link
+        font-size 16px
+        margin-top 4px
+        line-height 1.2
+        font-weight normal
+      }
+    }
+    &__item {
+      width 227px
+      text-align center
+      &:first-child {
+        .content-info-static__img {
+          margin-top 13px
+        }
+      }
+      &:nth-child(2) {
+      .content-info-static__img {
+        margin-top 2px
+      }
+      }
+      &:nth-child(3) {
+        .content-info-static__img {
+          margin-top -31px
+          margin-bottom 0
+        }
+        .content-info-static__title_small {
+          margin-left 50px
+        }
+      }
+      &:nth-child(4) {
+        .content-info-static__img {
+          margin-top 1px
+          margin-bottom 2px
+        }
+
+        .content-info-static__title_number {
+          position relative
+          &:before {
+            content "Более"
+            font-size 16px
+            position absolute
+            top 8px
+            left 27px
+          }
+        }
+      }
+    }
+    &__text {
+      margin-top 25px
+      font-size 16px
+      line-height 1.6
+
+    }
+  }
+  }
+
+    .advantages {
+      margin-top 47px
+      &__title {
+        text-align center
+      }
+      &__item {
+        display flex
+        min-height 145px
+        align-items center
+        border-bottom  3px solid #799c95
+        &_clear-bottom {
+          border-bottom none
+        }
+      }
+      &__img {
+        flex 0 0 145px
+        text-align center
+      }
+      &__text {
+        line-height 1.6
+        margin-right 35px
+        margin-top 50px
+        margin-bottom 50px
+      }
+    }
+
+    .content-button {
+        text-decoration none
+        font-size 18px
+        text-transform uppercase
+        width 357px
+        height 70px
+        margin 0 auto
+        text-align center
+        line-height 70px
+        margin-top 0px
+        &_first {
+          margin-bottom 67px
+          margin-top 35px
+        }
+        &__link {
+          color #ffffff
+          text-decoration none
+          display block
+          background-color $color-button-link
+          &:hover {
+              background-color $color-header-link-hover
+            }
+          &_advantages {
+            background-color $color-advantages
+            &:hover {
+              background-color $color-advantages-link
+            }
+          }
+          &_resources {
+            background-color $color-resources
+            &:hover {
+              background-color $color-resources-link
+            }
+          }
+          &_offers {
+            background-color $color-offers
+            &:hover {
+              background-color $color-offers-link
+            }
+          }
+          &_work {
+            background-color $color-work
+            &:hover {
+              background-color $color-work-link
+            }
+          }
+        }
+    }
+
+.wrapper-bg {
+  width 100%
+  &_advantages {
+    background-color $color-advantages
+  }
+  &_resources {
+    background-color $color-resources
+  }
+  &_offers {
+    background-color $color-offers
+  }
+  &_work {
+    background-color $color-work
+  }
+
+
+}
+  // Отзывы
+.reviews {
+&__wrapper {
+  display flex
+  justify-content space-between
+}
+  &__link {
+    text-decoration none
+  }
+  &__title {
+    overflow: hidden;
+    font-family 'Open Sans Regular', 'Arial', sans-serif
+    font-size 24px
+    text-align center
+    text-transform uppercase
+    margin-top 63px
+    margin-bottom 40px
+    span {
+      display inline-block
+      vertical-align middle
+    }
+    &:before,&:after {
+      content ""
+      display inline-block
+      vertical-align middle
+      width 100%
+      height 7px
+      background-color $color-work
+      position relative
+    }
+    &:before {
+      margin-left -100%
+      left -12px
+    }
+    &:after {
+      margin-right -100%
+      right -12px
+    }
+  }
+  &__item {
+    flex 0 0 308px
+  }
+  &__img {
+    position relative
+    &:before {
+      content ""
+      position absolute
+      height 92px
+      width 92px
+      left 50%
+      margin-left -46px
+      top 50%
+      margin-top -46px
+      background-image url("../img/content/reviews/button-img.png")
+    }
+  }
+  &__text {
+    font-family 'Open Sans Italic', 'Arial', sans-serif
+    font-size 16px
+    text-align center
+    color $color-work
+    margin-top 24px
+
+  }
+  &__all-wrapper {
+    text-align center
+  }
+  &__all{
+    display inline-block
+    font-family 'Open Sans Regular', 'Arial', sans-serif
+    font-size 18px
+    text-transform uppercase
+    color #000000
+    margin-top 36px
+    margin-bottom 62px
+  }
+}
+  //----footer---------
+  .footer {
+    margin-top 72px
+  &__wrapper {
+    display flex
+    align-items center
+    height 161px
+  }
+    &__img {
+      flex 0 0 226px
+      text-align center
+    }
+    &__text {
+      font-family 'Open Sans Regular', 'Arial', sans-serif
+      font-size 18px
+      line-height 3.2
+      color #ffffff
+    }
+    &__the-best {
+      margin-top 40px
+      margin-bottom 10px
+      font-family 'Open Sans Regular', 'Arial', sans-serif
+      font-size 24px
+      text-align center
+      text-transform uppercase
+
+    }
+  }
