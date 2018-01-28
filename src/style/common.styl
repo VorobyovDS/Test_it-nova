@@ -21,14 +21,16 @@
   $color-offers-link = #75383b
   $color-work = #477c71
   $color-work-link = #507c5e
-
-$width-content = 977px;
+  $width-content = 977px;
 
 body {
-  min-width $width-content
+
+  //margin 0 auto
+  //max-width $width-content
 }
 .body__wrapper {
-    width $width-content
+    max-width $width-content
+    min-width 300px
     margin 0 auto
     position relative
     overflow hidden
@@ -37,13 +39,14 @@ body {
 //----------------------HEADER----------------------------------
 .header {
   background url("../img/header/header-bg.png") no-repeat center;
-  height 400px;
-  min-width 100%
+  min-height 400px;
+  //min-width 100%
+  position relative
 
   &__link {
     position absolute
     left 155px
-    bottom 38px
+    bottom 5%
     text-decoration none
     font-family: 'Open Sans Regular', arial;
     font-size 18px
@@ -52,17 +55,36 @@ body {
     //border solid 1px #000000
     padding 20px 62px
     background-color $color-button-link
+    transition 0.5s
+    @media (max-width: 600px) {
+      transition 0.5s
+      left 62px
+    }
     &:hover {
       background-color $color-header-link-hover
       transition 0.5s
     }
 
   }
+  &__logo-img {
+    margin-left 88px
+    @media (max-width: 600px) {
+      transition 0.5s
+      margin-left 0px
+  }
+  }
   &__men-img {
     position absolute
-    right  -198px
+    right 0
     top 0
-    margin-left 100px
+    transition 0.5s
+    @media (max-width: 800px) {
+      transition 0.5s
+      right -200px
+    }
+    @media (max-width: 600px) {
+      display none
+    }
   }
 }
   //--------------------------------------------
@@ -81,10 +103,11 @@ body {
   .content {
     font-family: 'Open Sans Regular', Serif;
     &__wrapper {
-      width $width-content
+      max-width $width-content
       margin 0 auto
     }
     .content-info {
+      margin-left 10px
       &__link {
         color #ffffff
         text-decoration none
@@ -139,6 +162,10 @@ body {
       display flex
       justify-content space-between
       margin-top 34px
+      flex-wrap wrap
+    }
+    &__wrapper-number {
+      position: relative
     }
     &__title {
       margin-top 37px
@@ -156,8 +183,18 @@ body {
       }
     }
     &__item {
-      width 227px
-      text-align center
+        flex 0 1 25%
+        text-align center
+        @media (max-width: 950px) {
+          flex 0 0 50%
+        }
+      @media (max-width: 600px) {
+        flex 0 0 100%
+        border-bottom 1px solid #000000
+        &:last-child {
+          border-bottom none
+        }
+      }
       &:first-child {
         .content-info-static__img {
           margin-top 13px
@@ -185,20 +222,23 @@ body {
 
         .content-info-static__title_number {
           position relative
+          display inline-block
           &:before {
             content "Более"
             font-size 16px
             position absolute
             top 8px
-            left 27px
+            left -50px
           }
         }
       }
     }
     &__text {
-      margin-top 25px
+      display block
+      margin 25px auto
       font-size 16px
       line-height 1.6
+      max-width 227px
 
     }
   }
@@ -227,6 +267,10 @@ body {
         margin-right 35px
         margin-top 50px
         margin-bottom 50px
+        &_left {
+          margin-left 10px
+          margin-right 0px
+        }
       }
     }
 
@@ -301,6 +345,10 @@ body {
 &__wrapper {
   display flex
   justify-content space-between
+  @media (max-width: 950px) {
+    flex-direction column
+    align-items center
+  }
 }
   &__link {
     text-decoration none
@@ -336,7 +384,7 @@ body {
     }
   }
   &__item {
-    flex 0 0 308px
+    max-width 308px
   }
   &__img {
     position relative
@@ -386,10 +434,22 @@ body {
       text-align center
     }
     &__text {
-      font-family 'Open Sans Regular', 'Arial', sans-serif
-      font-size 18px
-      line-height 3.2
-      color #ffffff
+          font-family 'Open Sans Regular', 'Arial', sans-serif
+          font-size 18px
+          line-height 3.2
+          color #ffffff
+          @media (max-width: 900px) {
+          line-height 2.5
+        }
+          @media (max-width: 600px) {
+          line-height 1.5
+        }
+          @media (max-width: 500px) {
+          line-height 1
+      }
+          @media (max-width: 430px) {
+            font-size 16px
+      }
     }
     &__the-best {
       margin-top 40px

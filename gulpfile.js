@@ -11,6 +11,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     browserSync = require('browser-sync'),
     plumber = require('gulp-plumber'),
+    vueify = require('gulp-vueify'),
     //concatCSS = require('gulp-concat-css'),
     reload = browserSync.reload;
 
